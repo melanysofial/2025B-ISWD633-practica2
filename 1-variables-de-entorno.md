@@ -1,6 +1,7 @@
 # Variables de Entorno
 ### ¿Qué son las variables de entorno?
-# COMPLETAR
+Valores que el sistema operativo o una aplicación utiliza para configurar su comportamiento.
+Variables dinámicas.
 
 ### Para crear un contenedor con variables de entorno
 
@@ -10,18 +11,24 @@ docker run -d --name <nombre contenedor> -e <nombre variable1>=<valor1> -e <nomb
 
 ### Crear un contenedor a partir de la imagen de nginx:alpine con las siguientes variables de entorno: username y role. Para la variable de entorno rol asignar el valor admin.
 
-# COMPLETAR
+```
+docker create --name variablen nginx:alpine -e username=ml -e role=admin
+```
 
-# CAPTURA CON LA COMPROBACIÓN DE LA CREACIÓN DE LAS VARIABLES DE ENTORNO DEL CONTENEDOR ANTERIOR
+<img width="956" height="300" alt="image" src="https://github.com/user-attachments/assets/bf308119-700f-46d4-99f7-438c55f41224" />
+
 
 ### Crear un contenedor con la imagen de mysql, mapear todos los puertos
-# COMPLETAR
+```
+docker run -P -d --name mysql mysql:latest
+```
 
 ### ¿El contenedor se está ejecutando?
-# COMPLETAR
+No, para revisar debemos poner docker ps -a
 
 ### Identificar el problema
-# COMPLETAR
+<img width="1226" height="235" alt="image" src="https://github.com/user-attachments/assets/5677912d-0e55-4cd8-9fc5-d739cf4a18f1" />
+
 
 ### Para crear un contenedor con variables de entorno especificadas
 - Portabilidad: Las aplicaciones se vuelven más portátiles y pueden ser desplegadas en diferentes entornos (desarrollo, pruebas, producción) simplemente cambiando el archivo de variables de entorno.
@@ -36,4 +43,11 @@ docker run -d --name <nombre contenedor> -e <nombre variable1>=<valor1> -e <nomb
 # CAPTURA CON LA COMPROBACIÓN DE LA CREACIÓN DE LAS VARIABLES DE ENTORNO DEL CONTENEDOR ANTERIOR 
 
 ### ¿Qué bases de datos existen en el contenedor creado?
-# COMPLETAR
+```
+docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:8
+```
+```
+docker ps
+docker exec -it some-mysql bash
+docker exec -it some-mysql bash
+```
