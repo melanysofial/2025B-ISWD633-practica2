@@ -20,7 +20,7 @@ docker create --name variablen nginx:alpine -e username=ml -e role=admin
 
 ### Crear un contenedor con la imagen de mysql, mapear todos los puertos
 ```
-docker run -P -d --name mysql mysql:latest
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:8
 ```
 
 ### ¿El contenedor se está ejecutando?
@@ -44,10 +44,11 @@ No, para revisar debemos poner docker ps -a
 
 ### ¿Qué bases de datos existen en el contenedor creado?
 ```
-docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:8
-```
-```
 docker ps
 docker exec -it some-mysql bash
-docker exec -it some-mysql bash
+mysql -u root -p
+SHOW DATABASES;
 ```
+En el contenedor creado de mysql se encuentran las 4 bases predeterminadas: information_schema, mysql, performance_schema, sys.
+<img width="341" height="252" alt="image" src="https://github.com/user-attachments/assets/0cdc3301-fd5b-40a8-8f1b-a501fd0562ca" />
+
