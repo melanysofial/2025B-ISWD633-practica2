@@ -21,7 +21,9 @@ La figura presenta el esquema creado en donde los puertos son:
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/75d0aa8a-c927-49ad-9184-28212048cc0e" />
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/1c3424ff-52a3-4086-8f2d-b12bbf227ff9" />
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/4e14c25a-b72c-4203-a170-1e49474f82bc" />
+
 Para permitir la comunicación de la¿os contenedores se creó una red personalizada, permitiendo la comunicación directa y estable.
+
 ```
 #Para crear la red
 docker network create postgres-net
@@ -45,13 +47,17 @@ docker exec -it postgres psql -U postgres -d info -c "INSERT INTO personas (nomb
 ## Desde el servidor postgresl
 ### Acceder al servidor
 ### Conectarse a la base de datos info
+
 ```
 docker exec -it postgres bash
 psql -U postgres -d info
 ```
+
 ### Realizar un select *from personas
- ```
+
+```
 select * from personas;
 ```
-<img width="422" height="151" alt="image" src="https://github.com/user-attachments/assets/2c20fd38-e861-4952-b27e-bcac542bffe2" />
+
+<img width="422" height="151" alt="image" src="https://github.com/user-attachments/assets/dc14201f-0522-4fb9-b6aa-e6cb37e3d37c" />
 
