@@ -18,8 +18,9 @@ La figura presenta el esquema creado en donde los puertos son:
 
 ## Desde el cliente
 ### Acceder desde el cliente al servidor postgres creado.
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/75d0aa8a-c927-49ad-9184-28212048cc0e" />
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/1c3424ff-52a3-4086-8f2d-b12bbf227ff9" />
+
+<img width="3840" height="2100" alt="image" src="https://github.com/user-attachments/assets/4a8c8666-660e-4c48-87e0-87d6bbf15fca" />
+
 
 Para permitir la comunicación de los contenedores se creó una red personalizada, permitiendo la comunicación directa y estable.
 
