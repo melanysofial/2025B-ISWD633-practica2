@@ -20,9 +20,8 @@ La figura presenta el esquema creado en donde los puertos son:
 ### Acceder desde el cliente al servidor postgres creado.
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/75d0aa8a-c927-49ad-9184-28212048cc0e" />
 <img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/1c3424ff-52a3-4086-8f2d-b12bbf227ff9" />
-<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/4e14c25a-b72c-4203-a170-1e49474f82bc" />
 
-Para permitir la comunicación de la¿os contenedores se creó una red personalizada, permitiendo la comunicación directa y estable.
+Para permitir la comunicación de los contenedores se creó una red personalizada, permitiendo la comunicación directa y estable.
 
 ```
 #Para crear la red
@@ -34,14 +33,13 @@ docker network connect postgres-net pgadmin_cliente
 docker network inspect postgres-net 
 
 ```
+<img width="3840" height="2100" alt="image" src="https://github.com/user-attachments/assets/66e83998-506d-4a8a-9c56-21eb342aedef" />
+
 ### Crear la base de datos info, y dentro de esa base la tabla personas, con id (serial) y nombre (varchar), agregar un par de registros en la tabla, obligatorio incluir su nombre.
 ```
-#Para crear la database
-docker exec -it postgres psql -U postgres -c "CREATE DATABASE info;"
-#Para crear la tabla
-docker exec -it postgres psql -U postgres -d info -c "CREATE TABLE personas (id serial PRIMARY KEY, nombre varchar(100));"
-#Para insertar los nombres
-docker exec -it postgres psql -U postgres -d info -c "INSERT INTO personas (nombre) VALUES ('Melany'), ('Dilan');"
+#En la interfaz de usuario
+CREATE TABLE personas (id serial PRIMARY KEY, nombre varchar(100));
+INSERT INTO personas (nombre) VALUES ('Melany'), ('Dilan');
 ```
 
 ## Desde el servidor postgresl
@@ -59,5 +57,6 @@ psql -U postgres -d info
 select * from personas;
 ```
 
-<img width="422" height="151" alt="image" src="https://github.com/user-attachments/assets/dc14201f-0522-4fb9-b6aa-e6cb37e3d37c" />
+<img width="633" height="284" alt="image" src="https://github.com/user-attachments/assets/baca47d8-8298-4f9a-9471-6401ca7c363a" />
+
 
