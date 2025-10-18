@@ -21,22 +21,25 @@ De acuerdo con el trabajo realizado, en el esquema del ejercicio el puerto a es 
 
 Ingresar desde el navegador al wordpress y finalizar la configuración de instalación.
 
-<img width="3840" height="2100" alt="image" src="https://github.com/user-attachments/assets/cfe2cd9c-22d1-4d91-8270-aa23fb985250" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/159664c8-91d5-465d-8e04-29d6f6cc9f63" />
 
 
 Desde el panel de admin: cambiar el tema y crear una nueva publicación.
 Ingresar a: http://localhost:9300/ 
 recordar que a es el puerto que usó para el mapeo con wordpress
-<img width="3840" height="2100" alt="image" src="https://github.com/user-attachments/assets/3a2a2ba0-9ea8-40b7-972b-e20bf2b69234" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/933a9bb0-7d14-407c-b4e3-77757c0c2157" />
 
 
 ### Eliminar el contenedor wordpress
-# COMPLETAR
+```
+docker rm -f wordpress
+```
 
 ### Crear nuevamente el contenedor wordpress
 Ingresar a: http://localhost:9300/ 
 recordar que a es el puerto que usó para el mapeo con wordpress
 
 ### ¿Qué ha sucedido, qué puede observar?
-# COMPLETAR
+
+La configuración anterior se mantiene ya que la información se guarda en la base de datos de mysql.
 
